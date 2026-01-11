@@ -36,7 +36,7 @@ const Taskbar = ({ onOpenPanel, activePanel }: TaskbarProps) => {
           className={`taskbar-item font-display text-lg ${startMenuOpen ? "active" : ""}`}
         >
           <FolderOpen className="w-4 h-4" />
-          <span>Start</span>
+          <span>Work</span>
         </button>
 
         {/* Start Menu */}
