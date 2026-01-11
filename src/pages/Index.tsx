@@ -3,6 +3,16 @@ import { Gamepad2, Palette, Box, User } from "lucide-react";
 import Taskbar from "@/components/Taskbar";
 import SlidingPanel from "@/components/SlidingPanel";
 
+// Image imports
+import faceImg from "@/assets/face.jpg";
+import guitaristImg from "@/assets/guitarist.png";
+import roboheadImg from "@/assets/robohead.png";
+import sideprofileImg from "@/assets/sideprofile.png";
+import threeDModeImg from "@/assets/3dmode.jpg";
+import bluegirlImg from "@/assets/bluegirl.png";
+import skiermodelImg from "@/assets/skiermodel.jpg";
+import skiermodeiposeImg from "@/assets/skiermodelpose.jpg";
+import jetpackImg from "@/assets/jetpack.gif";
 
 interface SectionInfo {
   text: string;
@@ -14,26 +24,19 @@ interface SectionInfo {
 const sectionInfo: Record<string, SectionInfo> = {
   About: {
     text: "Luke Cravey is a game designer, illustrator, 3D modeler, and animator. Given a Wii at a young impressionable age, Luke had no choice but to become obsessed with games, art, and game design for the rest of his life.<br><br>Luke studies integrated design and media at NYU Tandon where he has honed his abilities to code, design, and model. He has worked on multiple smaller games and is currently working on publishing a game as part of an indie game studio.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+    image: faceImg,
   },
   "2D Design": {
     text: "A collection of 2D illustrations and character designs. From concept art to finished pieces, these works showcase a range of styles and techniques.",
-    images: [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=600&h=400&fit=crop",
-    ],
+    images: [guitaristImg, roboheadImg, sideprofileImg],
   },
   "3D Modeling": {
     text: "3D character models and environments created for games and animations. Featuring both stylized and realistic approaches.",
-    images: [
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=600&h=400&fit=crop",
-    ],
+    images: [threeDModeImg, bluegirlImg, skiermodelImg, skiermodeiposeImg],
   },
   "Robo Cave Adventure": {
     text: 'Simple platforming game about a broken robot escaping a cave.<br><br><a href="https://denluey.itch.io/roboalone" target="_blank" class="text-highlight hover:underline">&gt; Play Robo Alone on itch.io</a>',
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+    image: jetpackImg,
   },
   "Talking is Hard": {
     text: 'A game about the difficulty of conversing with other people.<br><br><a href="https://denluey.itch.io/talking-is-hard" target="_blank" class="text-highlight hover:underline">&gt; Play Talking Is Hard on itch.io</a>',
