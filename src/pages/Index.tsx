@@ -96,11 +96,6 @@ const Index = () => {
           <p className="text-foreground leading-relaxed">
             Use the taskbar below to explore my portfolio.
           </p>
-          <div className="mt-4 flex flex-wrap gap-2 justify-center">
-            <span className="retro-border-inset bg-muted px-3 py-1 text-sm">Unity</span>
-            <span className="retro-border-inset bg-muted px-3 py-1 text-sm">Blender</span>
-            <span className="retro-border-inset bg-muted px-3 py-1 text-sm">Procreate</span>
-          </div>
         </div>
       </main>
 
