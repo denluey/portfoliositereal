@@ -61,7 +61,7 @@ const Taskbar = ({ onOpenPanel, activePanel }: TaskbarProps) => {
                   {item.submenu && <span className="ml-auto">▶</span>}
                 </button>
                 {item.submenu && (
-                  <div className="absolute left-full top-0 w-56 dropdown-menu hidden group-hover:block">
+                  <div className="absolute left-full bottom-0 w-56 dropdown-menu hidden group-hover:block">
                     {item.submenu.map((sub) => (
                       <button
                         key={sub}
