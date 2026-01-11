@@ -6,6 +6,7 @@ interface SectionInfo {
   image?: string;
   images?: string[];
   video?: string;
+  videos?: string[];
   link?: { url: string; label: string };
 }
 
@@ -18,11 +19,15 @@ interface SlidingPanelProps {
 
 const SlidingPanel = ({ isOpen, onClose, title, content }: SlidingPanelProps) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   if (!content) return null;
 
   const images = content.images || (content.image ? [content.image] : []);
   const hasMultipleImages = images.length > 1;
+  
+  const videos = content.videos || (content.video ? [content.video] : []);
+  const hasMultipleVideos = videos.length > 1;
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -30,6 +35,14 @@ const SlidingPanel = ({ isOpen, onClose, title, content }: SlidingPanelProps) =>
 
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const nextVideo = () => {
+    setCurrentVideoIndex((prev) => (prev + 1) % videos.length);
+  };
+
+  const prevVideo = () => {
+    setCurrentVideoIndex((prev) => (prev - 1 + videos.length) % videos.length);
   };
 
   return (
@@ -52,12 +65,13 @@ const SlidingPanel = ({ isOpen, onClose, title, content }: SlidingPanelProps) =>
 
       {/* Content */}
       <div className="p-6">
-        {/* Video */}
-        {content.video && (
+        {/* Video Gallery */}
+        {videos.length > 0 && (
           <div className="mb-6">
             <div className="retro-border-inset bg-background p-2">
               <video
-                src={content.video}
+                key={videos[currentVideoIndex]}
+                src={videos[currentVideoIndex]}
                 controls
                 autoPlay
                 loop
@@ -65,11 +79,26 @@ const SlidingPanel = ({ isOpen, onClose, title, content }: SlidingPanelProps) =>
                 className="w-full h-auto max-h-80"
               />
             </div>
+            {hasMultipleVideos && (
+              <div className="flex justify-center gap-4 mt-4">
+                <button onClick={prevVideo} className="retro-button flex items-center gap-1">
+                  <ChevronLeft className="w-4 h-4" />
+                  Prev
+                </button>
+                <span className="text-muted-foreground self-center">
+                  {currentVideoIndex + 1} / {videos.length}
+                </span>
+                <button onClick={nextVideo} className="retro-button flex items-center gap-1">
+                  Next
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            )}
           </div>
         )}
 
         {/* Image Gallery */}
-        {!content.video && images.length > 0 && (
+        {videos.length === 0 && images.length > 0 && (
           <div className="mb-6">
             <div className="retro-border-inset bg-background p-2">
               <img
