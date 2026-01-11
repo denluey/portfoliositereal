@@ -21,6 +21,7 @@ import talkImg from "@/assets/talk.gif";
 import yellowmanImg from "@/assets/yellowman.png";
 import logoMotionVid from "@/assets/logo_motion.mp4";
 import kinetictextVid from "@/assets/kinetictext.mp4";
+import collageoneVid from "@/assets/collageone.mp4";
 
 interface SectionInfo {
   text: string;
@@ -46,7 +47,7 @@ const sectionInfo: Record<string, SectionInfo> = {
   },
   "Motion Graphics": {
     text: "Animated logos, motion design, and visual effects. Bringing static designs to life with movement and energy.",
-    videos: [logoMotionVid, kinetictextVid],
+    videos: [logoMotionVid, kinetictextVid, collageoneVid],
   },
   "Robo Cave Adventure": {
     text: 'Simple platforming game about a broken robot escaping a cave.<br><br><a href="https://denluey.itch.io/roboalone" target="_blank" class="text-highlight hover:underline">&gt; Play Robo Alone on itch.io</a>',
