@@ -41,7 +41,7 @@
     --taskbar-foreground: 60 30% 96%;
     --panel: 220 70% 20%;
     --highlight: 180 100% 70%;
-    --bevel-light: 220 30% 45%;
+    --bevel-light: 0 0% 100%;
     --bevel-dark: 220 60% 8%;
 
     --font-display: 'VT323', monospace;
