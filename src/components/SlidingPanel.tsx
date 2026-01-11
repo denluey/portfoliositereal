@@ -34,7 +34,7 @@ const SlidingPanel = ({ isOpen, onClose, title, content }: SlidingPanelProps) =>
 
   return (
     <div
-      className={`fixed top-0 right-0 w-full max-w-lg h-[calc(100%-3rem)] bg-panel retro-border panel-slide overflow-y-auto z-40 ${
+      className={`fixed top-0 right-0 w-full max-w-lg h-[calc(100vh-3rem)] bg-panel retro-border panel-slide overflow-y-auto z-40 ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
       style={{ transition: "transform 0.4s ease" }}
