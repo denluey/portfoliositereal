@@ -83,37 +83,8 @@ const Taskbar = ({ onOpenPanel, activePanel }: TaskbarProps) => {
         )}
       </div>
 
-      {/* Taskbar Items */}
-      <div className="flex-1 flex items-center gap-2 px-4">
-        <button
-          onClick={() => onOpenPanel("About")}
-          className={`taskbar-item ${activePanel === "About" ? "active" : ""}`}
-        >
-          <User className="w-4 h-4" />
-          <span className="hidden sm:inline">About</span>
-        </button>
-        <button
-          onClick={() => onOpenPanel("Gaming Projects")}
-          className={`taskbar-item ${["Robo Cave Adventure", "Talking is Hard", "Skijoring"].includes(activePanel || "") ? "active" : ""}`}
-        >
-          <Gamepad2 className="w-4 h-4" />
-          <span className="hidden sm:inline">Games</span>
-        </button>
-        <button
-          onClick={() => onOpenPanel("2D Design")}
-          className={`taskbar-item ${activePanel === "2D Design" ? "active" : ""}`}
-        >
-          <Palette className="w-4 h-4" />
-          <span className="hidden sm:inline">2D</span>
-        </button>
-        <button
-          onClick={() => onOpenPanel("3D Modeling")}
-          className={`taskbar-item ${activePanel === "3D Modeling" ? "active" : ""}`}
-        >
-          <Box className="w-4 h-4" />
-          <span className="hidden sm:inline">3D</span>
-        </button>
-      </div>
+      {/* Spacer */}
+      <div className="flex-1" />
 
       {/* System Tray */}
       <div className="retro-border-inset bg-muted px-4 py-1 text-sm font-mono">
