@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Gamepad2, Palette, Box, User, FileText, Folder } from "lucide-react";
+import { Gamepad2, Palette, Box, User } from "lucide-react";
 import Taskbar from "@/components/Taskbar";
 import SlidingPanel from "@/components/SlidingPanel";
-import DesktopIcon from "@/components/DesktopIcon";
+
 
 interface SectionInfo {
   text: string;
@@ -64,17 +64,8 @@ const Index = () => {
     setActivePanel(null);
   };
 
-  const desktopIcons = [
-    { icon: User, label: "About Me", section: "About" },
-    { icon: Gamepad2, label: "Robo Cave", section: "Robo Cave Adventure" },
-    { icon: Gamepad2, label: "Talking is Hard", section: "Talking is Hard" },
-    { icon: Gamepad2, label: "Skijoring", section: "Skijoring" },
-    { icon: Palette, label: "2D Design", section: "2D Design" },
-    { icon: Box, label: "3D Models", section: "3D Modeling" },
-  ];
-
   return (
-    <div className="min-h-screen bg-background pb-12 relative overflow-hidden">
+    <div className="min-h-screen bg-background pb-12 relative overflow-hidden flex flex-col">
       {/* Desktop Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -98,28 +89,14 @@ const Index = () => {
         </p>
       </header>
 
-      {/* Desktop Icons Grid */}
-      <main className="p-4 relative z-10">
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
-          {desktopIcons.map((item) => (
-            <DesktopIcon
-              key={item.section}
-              icon={item.icon}
-              label={item.label}
-              onClick={() => handleOpenPanel(item.section)}
-            />
-          ))}
-        </div>
-
-        {/* Quick Info Card */}
-        <div className="mt-8 retro-border bg-card p-6 max-w-2xl">
+      {/* Main Content Area */}
+      <main className="flex-1 p-4 relative z-10 flex items-center justify-center">
+        <div className="retro-border bg-card p-6 max-w-xl text-center">
           <h2 className="font-display text-2xl text-highlight mb-4">&gt; Welcome</h2>
           <p className="text-foreground leading-relaxed">
-            Click on the icons above or use the taskbar below to explore my portfolio.
-            Each icon opens a window with more information about that project or skill.
+            Use the taskbar below to explore my portfolio.
           </p>
-          <div className="mt-4 flex flex-wrap gap-2">
-            <span className="retro-border-inset bg-muted px-3 py-1 text-sm">React</span>
+          <div className="mt-4 flex flex-wrap gap-2 justify-center">
             <span className="retro-border-inset bg-muted px-3 py-1 text-sm">Unity</span>
             <span className="retro-border-inset bg-muted px-3 py-1 text-sm">Blender</span>
             <span className="retro-border-inset bg-muted px-3 py-1 text-sm">Procreate</span>
