@@ -34,11 +34,11 @@ const sectionInfo: Record<string, SectionInfo> = {
   },
   "2D Design": {
     text: "A collection of 2D illustrations and character designs. From concept art to finished pieces, these works showcase a range of styles and techniques.",
-    images: [guitaristImg, roboheadImg, sideprofileImg, yellowmanImg],
+    images: [guitaristImg, roboheadImg, sideprofileImg, yellowmanImg, bluegirlImg],
   },
   "3D Modeling": {
     text: "3D character models and environments created for games and animations. Featuring both stylized and realistic approaches.",
-    images: [threeDModeImg, bluegirlImg, skiermodelImg, skiermodeiposeImg, snowmmodelImg, snowmomodelposeImg],
+    images: [threeDModeImg, skiermodelImg, skiermodeiposeImg, snowmmodelImg],
   },
   "Robo Cave Adventure": {
     text: 'Simple platforming game about a broken robot escaping a cave.<br><br><a href="https://denluey.itch.io/roboalone" target="_blank" class="text-highlight hover:underline">&gt; Play Robo Alone on itch.io</a>',
