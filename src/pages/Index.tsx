@@ -13,6 +13,12 @@ import bluegirlImg from "@/assets/bluegirl.png";
 import skiermodelImg from "@/assets/skiermodel.jpg";
 import skiermodeiposeImg from "@/assets/skiermodelpose.jpg";
 import jetpackImg from "@/assets/jetpack.gif";
+import skijor1Img from "@/assets/skijor1.png";
+import skijor2Img from "@/assets/skijor2.jpg";
+import snowmmodelImg from "@/assets/snowmmodel.jpg";
+import snowmomodelposeImg from "@/assets/snowmomodelpose.jpg";
+import talkImg from "@/assets/talk.gif";
+import yellowmanImg from "@/assets/yellowman.png";
 
 interface SectionInfo {
   text: string;
@@ -28,11 +34,11 @@ const sectionInfo: Record<string, SectionInfo> = {
   },
   "2D Design": {
     text: "A collection of 2D illustrations and character designs. From concept art to finished pieces, these works showcase a range of styles and techniques.",
-    images: [guitaristImg, roboheadImg, sideprofileImg],
+    images: [guitaristImg, roboheadImg, sideprofileImg, yellowmanImg],
   },
   "3D Modeling": {
     text: "3D character models and environments created for games and animations. Featuring both stylized and realistic approaches.",
-    images: [threeDModeImg, bluegirlImg, skiermodelImg, skiermodeiposeImg],
+    images: [threeDModeImg, bluegirlImg, skiermodelImg, skiermodeiposeImg, snowmmodelImg, snowmomodelposeImg],
   },
   "Robo Cave Adventure": {
     text: 'Simple platforming game about a broken robot escaping a cave.<br><br><a href="https://denluey.itch.io/roboalone" target="_blank" class="text-highlight hover:underline">&gt; Play Robo Alone on itch.io</a>',
@@ -40,14 +46,11 @@ const sectionInfo: Record<string, SectionInfo> = {
   },
   "Talking is Hard": {
     text: 'A game about the difficulty of conversing with other people.<br><br><a href="https://denluey.itch.io/talking-is-hard" target="_blank" class="text-highlight hover:underline">&gt; Play Talking Is Hard on itch.io</a>',
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop",
+    image: talkImg,
   },
   Skijoring: {
     text: 'In progress game about a skier being pulled down a mountain by a friend on a snowmobile.<br><br><a href="https://store.steampowered.com/app/4023240/Skijoring/" target="_blank" class="text-highlight hover:underline">&gt; View Skijoring on Steam</a>',
-    images: [
-      "https://images.unsplash.com/photo-1551524559-8af4e6624178?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=600&h=400&fit=crop",
-    ],
+    images: [skijor1Img, skijor2Img],
   },
 };
 
