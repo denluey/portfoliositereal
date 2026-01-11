@@ -23,7 +23,6 @@ const Taskbar = ({ onOpenPanel, activePanel }: TaskbarProps) => {
   };
 
   const menuItems = [
-    { name: "About", icon: User },
     { name: "Gaming Projects", icon: Gamepad2, submenu: ["Robo Cave Adventure", "Talking is Hard", "Skijoring"] },
     { name: "Design", icon: Palette, submenu: ["2D Design", "3D Modeling"] },
   ];
@@ -83,8 +82,16 @@ const Taskbar = ({ onOpenPanel, activePanel }: TaskbarProps) => {
         )}
       </div>
 
-      {/* Spacer */}
-      <div className="flex-1" />
+      {/* About Button */}
+      <div className="flex-1 flex items-center px-4">
+        <button
+          onClick={() => onOpenPanel("About")}
+          className={`taskbar-item ${activePanel === "About" ? "active" : ""}`}
+        >
+          <User className="w-4 h-4" />
+          <span className="hidden sm:inline">About</span>
+        </button>
+      </div>
 
       {/* System Tray */}
       <div className="retro-border-inset bg-muted px-4 py-1 text-sm font-mono">
